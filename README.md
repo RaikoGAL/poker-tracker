@@ -2,7 +2,7 @@
 
 A bankroll-discipline and hand-review app for online cash-game players, built around ClubGG.
 
-**Live:** https://raikogal.github.io/poker-tracker/
+**Live:** https://pokerledger.pages.dev/
 
 - **Home** answers one question before you sit down: *can I play right now?* It checks your bankroll against the stake, your stop-loss cooldown, losing streaks and deposit rules, then starts and times the session.
 - **Live session** shows how much you're in for and the chip count where your stop-loss says leave. Rebuys need a written reason and are capped.
