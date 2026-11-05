@@ -55,7 +55,7 @@
 
 ## 6. Risks and what we do about each
 
-1. **ClubGG Screen Guard covers the replay screen.** *Check on a real iPhone this week, and after every ClubGG release.* If yes: lead with ledger + discipline, hand capture via quick-log and club-emailed histories, Android as the screenshot path if it isn't guarded there.
+1. **ClubGG Screen Guard covers the replay screen.** *Checked 5 Nov 2026: screenshots of the hand replay work on Gal's phone, including a replay opened mid-session while another hand is live (shown as a mini-table top left). ClubGG has no share/export/link option for hands.* Re-check after every ClubGG release. If it ever blacks out: lead with ledger + discipline, hand capture via quick-log.
 2. **Players won't log.** The founding hypothesis. *Test it before building anything else:* 10 players, four weeks, three-tap logging, measure sessions logged per session played.
 3. **Agents and clubs see a rake statement as a threat.** *Test with two agents early.* If hostile, the rake feature stays player-side and quiet; distribution shifts to communities and players.
 4. **NSUS attaches a GG-style policy to ClubGG.** Watch 1 December 2026. Design so the product never needs the app's permission: own data, after the session, through the OS share sheet.
@@ -125,8 +125,8 @@ Build, in this order:
 
 | # | Task | Owner |
 |---|---|---|
-| 1 | Screenshot the ClubGG replay screen on iOS; report works/black/toggle. Check Settings for a Screen Guard switch. | Gal |
-| 2 | Look for any "share hand"/replay link in ClubGG. | Gal |
+| 1 | ~~Screenshot the ClubGG replay screen~~ Done: works, including mid-session. | Gal |
+| 2 | ~~Look for any "share hand"/replay link in ClubGG~~ Done: none exists. Capture = screenshots only. | Gal |
 | 3 | List 10 candidate pilot players and 2 agents. | Gal |
 | 4 | Write the interview guide and a one-page pilot brief in Hebrew. | Claude |
 | 5 | Spec the three-tap session + friction screens (wireframes, copy) for review before any code. | Claude |
