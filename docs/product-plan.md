@@ -131,3 +131,36 @@ Build, in this order:
 | 4 | Write the interview guide and a one-page pilot brief in Hebrew. | Claude |
 | 5 | Spec the three-tap session + friction screens (wireframes, copy) for review before any code. | Claude |
 | 6 | Design the ledger data model changes (per-club rates, agent events, rake fields, opponent hashing). | Claude |
+
+## 11. Status — 5 November 2026 (v2 shipped)
+
+Built and live at pokerledger.pages.dev and in the Claude version:
+
+| Plan item | Status |
+|---|---|
+| Three-tap session with limits set at start, free text, low anchor (2 buy-ins), time cap | Done |
+| Rebuy pause (15 s, big "Stop here and end"), at 80% of own limit or past it, or past planned rebuys | Done |
+| Raising a limit counts from tomorrow 06:00, lowering counts now | Done (first-ever plan exempt) |
+| Deposit pause: during a session, within 3 h of a losing session, or over a weekly cap | Done |
+| Balance check against ClubGG club balance, with "what was the difference?" | Done (new, not in v1 plan) |
+| "I already played" 10-second log, excluded from the streak | Done (new) |
+| Club-native ledger: per-club chip rate, agent deposit/withdrawal, rakeback, weekly statement, rebuy chain, CSV + backup file + restore | Done. Rake reconstruction waits on what ClubGG shows. |
+| Weekly streak, 2 freezes, earn-back, self-chosen goal, "Commit" copy, neutral off-plan screen with one next step | Done |
+| Hebrew UI (right-to-left) | Done |
+| bb/100 removed; win rate hidden until 10,000 hands, then with a 95% range | Done (hands estimated from hours unless entered) |
+| Quick-log of a hand without screenshots | Done |
+| Next-day review with outcome hidden, Good/Mistake/Not sure, street, technical vs mental tags | Done |
+| Leak tally (3 weeks) → tonight's focus → "did you stick to it?" | Done |
+| Tilt profile: mental-mistake share, rating in long vs short sessions, your own in-the-moment notes | Done (first version) |
+| Batch screenshot reading: identify each image, group by hand number, one full read per hand, pot-math validation | Done in the Claude version; web queues screenshots to the account |
+| Opponent names hashed on ingestion; screenshots deleted after reading | Done |
+| No-account start, local-first storage, email-link backup, multi-device sync | Done |
+| Invite a table-mate (share link) | Done |
+| Pilot metrics queries | docs/pilot-metrics.sql |
+
+Still open:
+1. **Rake.** Need to know whether ClubGG shows rake/fee per hand or per session anywhere.
+2. **Hands played.** Optional field at session end; otherwise estimated at 60 hands/hour (adjustable).
+3. **Time-limit nudge when the app is closed.** A website can only notify on iPhone if it's added to the home screen. Decide whether to offer that step after the first session.
+4. **Screenshot reading for pilot users on the website** (not just the owner's Claude version): needs a server-side reader, e.g. Gemini's free tier in a Supabase edge function. Free tier may use images for training, which is fine for a pilot and must change before strangers use it.
+5. Phase 0 tasks below (pilot recruiting, interviews) are unchanged.
